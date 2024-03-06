@@ -1,0 +1,21 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <i class="fa-solid fa-house-flag d-inline-block align-text-top" alt="" width="30" height="24"></i>
+      Simple Airbnb
+    </a>
+    <%= link_to "Add flat", new_flat_path %>
+  </div>
+</nav>
+<div class="container">
+    <div>
+        <%= simple_form_for @flat do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :description %>
+        <%= f.input :price_per_night %>
+        <%= f.input :number_of_guests %>
+        <%= f.button :submit %>
+        <% end %>
+    </div>
+</div>
